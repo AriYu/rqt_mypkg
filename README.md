@@ -62,7 +62,7 @@ $ emacs plugin.xml
 </library>
 ```
 
-大体のタグは見たら分かると思う。（詳しい説明はref.[1]の4.3.1節を参照）
+大体のタグは見たら分かると思う。（詳しい説明はref.[1]の4.3.1節を参照）  
 ちなみに`Group`タグと`Subgroup`タグは名前は何でも良くて、これはpluginをrqtのプルダウンメニューから選択して起動するときのフォルダ分け。
 
 ### Pluginのコードを書く
@@ -76,9 +76,9 @@ $ cd src/rqt_mypkg
 $ touch __init__.py
 ```
 
-`__init__.py`の中身は空で問題無い。何で必要かとかは調べる。
-次にスクリプト本体を書く。
-さっきの`__init__.py`と同じディレクトリで
+`__init__.py`の中身は空で問題無い。何で必要かとかは調べる。  
+次にスクリプト本体を書く。  
+さっきの`__init__.py`と同じディレクトリで  
 
 ``` bash
 $ emacs my_module.py
@@ -146,9 +146,9 @@ class MyPlugin(Plugin):
         pass
 ```
 
-特に実用的も何も無くて、ただUIを表示するだけでコールバック関数も何も定義されていない。
-余裕があればもう少し実用的な何かを作りたい。
-ちなみに上記のコードはref.[2]にある。
+特に実用的も何も無くて、ただUIを表示するだけでコールバック関数も何も定義されていない。  
+余裕があればもう少し実用的な何かを作りたい。  
+ちなみに上記のコードはref.[2]にある。  
 
 ### UIを用意する
 
@@ -157,11 +157,11 @@ $ cd <catkin_ws>/rqt_mypkg
 $ mkdir resource
 ```
 
-TODO
+TODO  
 Qtデザイナーを使って用意するらしいけど、まだやっていない。
 `resource`ディレクトリの中に`MyPlugin.ui`を用意する。適当なpluginから持ってきてやればとりあえずは起動まで出来る。
-例えば
-https://github.com/ros-visualization/rqt_common_plugins/blob/efc7c7e30533c598869943fb400a5744c7d30881/rqt_service_caller/resource/ServiceCaller.ui
+例えば  
+https://github.com/ros-visualization/rqt_common_plugins/blob/efc7c7e30533c598869943fb400a5744c7d30881/rqt_service_caller/resource/ServiceCaller.ui  
 とか。
 
 ### setup.pyを用意する
@@ -221,10 +221,10 @@ $ catkin_make
 $ source devel/setup.bash[zsh]
 ```
 
-ビルドエラーがなければ、rqtでプラグインを実行できる。
+ビルドエラーがなければ、rqtでプラグインを実行できる。  
 多分、`MyPlugin.ui`が無いと言ってエクセプションするけど、どこかのpluginから持ってくればよい。
 
 ## Reference
-[1] http://wiki.ros.org/rqt/Tutorials/Create%20your%20new%20rqt%20plugin
-[2] http://wiki.ros.org/rqt/Tutorials/Writing%20a%20Python%20Plugin
-[3] http://docs.ros.org/groovy/api/catkin/html/user_guide/setup_dot_py.html
+[1] http://wiki.ros.org/rqt/Tutorials/Create%20your%20new%20rqt%20plugin  
+[2] http://wiki.ros.org/rqt/Tutorials/Writing%20a%20Python%20Plugin  
+[3] http://docs.ros.org/groovy/api/catkin/html/user_guide/setup_dot_py.html  
