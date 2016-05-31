@@ -221,6 +221,22 @@ $ catkin_make
 $ source devel/setup.bash[zsh]
 ```
 
+### 実行してみる
+
+```bash
+$ rqt --standalone rqt_mypkg
+```
+もし、次のようなエラーが出れば
+```bash
+> qt_gui_main() found no plugin matching "rqt_mypkg"
+```
+```bash
+$ rqt --force-discover
+```
+を実行して、メニューから呼び出す。
+ref[4]によれば、`rqt`は起動を速くするために前回の起動から24時間以内ならキャッシュしたpluginリストを見に行くらしい。なので、見つからないということがおこる（要出典）。
+
+
 ビルドエラーがなければ、rqtでプラグインを実行できる。  
 多分、`MyPlugin.ui`が無いと言ってエクセプションするけど、どこかのpluginから持ってくればよい。
 
@@ -228,3 +244,4 @@ $ source devel/setup.bash[zsh]
 [1] http://wiki.ros.org/rqt/Tutorials/Create%20your%20new%20rqt%20plugin  
 [2] http://wiki.ros.org/rqt/Tutorials/Writing%20a%20Python%20Plugin  
 [3] http://docs.ros.org/groovy/api/catkin/html/user_guide/setup_dot_py.html  
+[4] https://github.com/ros-visualization/rqt/issues/90
