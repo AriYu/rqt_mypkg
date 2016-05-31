@@ -157,7 +157,8 @@ $ cd <catkin_ws>/rqt_mypkg
 $ mkdir resource
 ```
 
-TODO  
+---
+[WIP]  
 
 コマンドラインから
 ```bash
@@ -171,8 +172,8 @@ $ designer
 ```xml
 <widget class="QWidget" name="B3m">
 ```
+---
 
-Qtデザイナーを使って用意するらしいけど、まだやっていない。
 `resource`ディレクトリの中に`MyPlugin.ui`を用意する。適当なpluginから持ってきてやればとりあえずは起動まで出来る。
 例えば  
 https://github.com/ros-visualization/rqt_common_plugins/blob/efc7c7e30533c598869943fb400a5744c7d30881/rqt_service_caller/resource/ServiceCaller.ui  
