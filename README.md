@@ -244,4 +244,4 @@ ref[4]によれば、`rqt`は起動を速くするために前回の起動から
 [1] http://wiki.ros.org/rqt/Tutorials/Create%20your%20new%20rqt%20plugin  
 [2] http://wiki.ros.org/rqt/Tutorials/Writing%20a%20Python%20Plugin  
 [3] http://docs.ros.org/groovy/api/catkin/html/user_guide/setup_dot_py.html  
-[4] https://github.com/ros-visualization/rqt/issues/90
+[4] https://github.com/ros-visualization/rqt/issues/90  
