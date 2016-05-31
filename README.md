@@ -158,6 +158,20 @@ $ mkdir resource
 ```
 
 TODO  
+
+コマンドラインから
+```bash
+$ designer
+```
+と入力して`Qt Designer`を起動する。  
+適当にデザインする。  
+参考：http://densan-labs.net/tech/qt/chapter5.html  
+保存する。  
+出来上がったファイルの4行目あたりの`class="hogehoge"`を以下のように変更する。
+```xml
+<widget class="QWidget" name="B3m">
+```
+
 Qtデザイナーを使って用意するらしいけど、まだやっていない。
 `resource`ディレクトリの中に`MyPlugin.ui`を用意する。適当なpluginから持ってきてやればとりあえずは起動まで出来る。
 例えば  
