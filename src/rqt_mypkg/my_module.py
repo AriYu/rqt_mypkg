@@ -41,6 +41,9 @@ class MyPlugin(Plugin):
             self._widget.setWindowTitle(self._widget.windowTitle() + (' %d' % context.serial_number()))
         # Add widget to the user interface
         context.add_widget(self._widget)
+        self._widget.cancelButton.clicked[bool].connect(self._handle_cancel_clicked)
+        self._widget.okButton.clicked[bool].connect(self._handle_ok_clicked)
+
 
     def shutdown_plugin(self):
         # TODO unregister all publishers here
@@ -55,3 +58,9 @@ class MyPlugin(Plugin):
         # TODO restore intrinsic configuration, usually using:
         # v = instance_settings.value(k)
         pass
+
+    def _handle_cancel_clicked(self):
+        print "cancelButton is clicked"
+
+    def _handle_ok_clicked(self):
+        print "okButton is clicked"
